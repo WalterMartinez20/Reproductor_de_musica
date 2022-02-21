@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Reproductor_de_musica</string>
+    <string name="iniciar">INICIAR</string>
+    <string name="parar">DETENER</string>
+    <string name="btIrcam">Ir a camara</string>
+    <string name="btIrReprVi">Ir a reproductor de video</string>
+    <string name="tituloRep">Reproductor de video</string>
+</resources>
