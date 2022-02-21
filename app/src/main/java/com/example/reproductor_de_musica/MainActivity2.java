@@ -33,28 +33,24 @@ public class MainActivity2 extends AppCompatActivity {
         btfoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                llamarIntent();
+                abrirCamara();
             }
         });
     }
 
-
-    private void llamarIntent(){
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null)
-        {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-        }
+    private void abrirCamara(){
+        Intent intentCamara = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //if(intentCamara.resolveActivity(getPackageManager()) !=null){
+            startActivityForResult(intentCamara, 1);
+       // }
     }
 
-    // Si la captura de la imagen se realizó
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(imageBitmap);
+            Bitmap imgBitmap = (Bitmap) extras.get("data");
+            imageView.setImageBitmap(imgBitmap);
         }
     }
 }

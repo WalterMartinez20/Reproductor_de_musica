@@ -11,13 +11,13 @@
         android:id="@+id/TomarFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="tomar foto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116"
-        android:contentDescription="tomar foto"
+        app:layout_constraintVertical_bias="0.086"
         app:srcCompat="@drawable/camara2" />
 
     <ImageView
@@ -29,7 +29,6 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853"
-        app:srcCompat="@drawable/mostrar" />
+        app:layout_constraintVertical_bias="0.907" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
